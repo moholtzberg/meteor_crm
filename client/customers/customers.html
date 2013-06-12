@@ -1,0 +1,25 @@
+<template name="customers">
+	
+	{{#if selected}}
+		
+		{{> customers_list}}
+		
+		{{#if action "new"}}
+			{{> customers_create}}
+		{{/if}}
+	
+		{{#if action "edit"}}
+			{{> customers_update}}
+		{{/if}}
+	
+		{{#if action "view"}}
+			{{> customers_show}}
+		{{/if}}
+		
+		{{#if action "delete"}}
+			{{> customers_delete}}
+		{{/if}}
+		
+	{{/if}}
+	
+</template>

@@ -1,0 +1,80 @@
+<template name="customers_show">
+	{{#if record}}
+	<div class="mask"> </div>
+	<div class="modal" data-backdrop="true">
+		<div class="modal-header">
+			<button id="close" type="button" class="close cancel">&times;</button>
+			<h3>Customer View</h3>
+		</div>
+		
+		<div class="modal-body">
+			{{#if error}}
+			<div class="alert alert-error">{{error}}</div>
+			{{/if}}
+			
+			<form id="update_customer" class="container-fluid">
+
+				<legend>General Info</legend>
+
+				<fieldset>	
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_name" placeholder="Customer Name" value="{{record.name}}" class="span12" disabled>
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_address" placeholder="Customer Address" value="{{record.address}}" class="span12" disabled>
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_city" placeholder="City…" value="{{record.city}}" class="span6" disabled>
+						<input type="text" id="customer_state" placeholder="State" value="{{record.state}}" class="span2" disabled>
+						<input type="text" id="customer_zip" placeholder="Zip" value="{{record.zip}}" class="span4" disabled>
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_phone" placeholder="Phone" value="{{record.phone}}" class="span6" disabled>
+						<input type="text" id="customer_fax" placeholder="Fax" value="{{record.fax}}" class="span6" disabled>
+					</div>
+					
+				</fieldset>
+				
+				<legend>Other Info</legend>
+				
+				<fieldset>	
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="eda_number" placeholder="EDA Number" value="{{record.eda_number}}" class="span4" disabled>
+						<input type="text" id="duns_number" placeholder="DUNS Number" value="{{record.duns_number}}" class="span4" disabled>
+						<input type="text" id="sic_code" placeholder="SIC Code" value="{{record.sic_code}}" class="span4" disabled>
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<textarea id="customer_notes" rows="4" class="span12" disabled>{{record.notes}}</textarea>
+					</div>
+
+				</fieldset>
+
+			</form>
+			
+			<div class="container-fluid">
+				<legend>Contacts</legend>
+					{{#each record.contacts}}
+						<a href="#" id="contact_{{_id}}" contact_id="{{_id}}" class="show_contact">{{fullName}}</a>
+					{{/each}}
+					{{#if viewContact}}
+						{{> contacts_show}}
+					{{/if}}
+			</div>
+			
+			
+		</div>
+		
+		<div class="modal-footer">
+			<!-- <a id="cancel" class="btn cancel">Cancel</a> -->
+			<a id="edit_customer" class="btn btn-primary save">Edit Customer</a>
+		</div>
+	</div>
+	{{/if}}
+	
+</template>

@@ -1,0 +1,7 @@
+<template name="modules">
+	<ul id="module_list" class="nav">
+		{{#each list}}
+		<li><a href="#" id="module_{{_id}}" module_id="{{_id}}" class="module">{{name}}</a></li>
+		{{/each}}
+	</ul>
+</template>

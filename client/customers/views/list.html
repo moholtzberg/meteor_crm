@@ -1,0 +1,37 @@
+<template name="customers_list">
+	<div class="container-fluid">
+		<table class="table table-bordered table-hover table-condensed">
+			<!-- <thead> -->
+				<tr>
+					<th>Name</th>
+					<th>Address</th>
+					<th>City</th>
+					<th>State</th>
+					<th>Zip</th>
+					<th>Phone</th>
+					<th>Actions</th>
+				</tr>
+			<!-- </thead> -->
+			{{#each record}}
+				<tr>
+					<td>{{truncate name length="25" ending="..."}}</td>
+					<td>{{address}}</td>
+					<td>{{city}}</td>
+					<td>{{state}}</td>
+					<td>{{zip}}</td>
+					<td>{{phone}}</td>
+					<td>
+						<div class="btn-group">
+							<button id="view_customer_{{_id}}" customer_id="{{_id}}" class="btn btn-small view_customer">View</button>
+							<button id="edit_customer_{{_id}}" customer_id="{{_id}}" class="btn btn-small edit_customer">Edit</button>
+							<button id="delete_customer_{{_id}}" customer_id="{{_id}}" class="btn btn-small delete_customer">Delete</button>
+						</div>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+		
+		<button id="new_customer" class="btn btn-primary">New Customer</button>
+		
+	</div>
+</template>

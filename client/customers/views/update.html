@@ -1,0 +1,67 @@
+<template name="customers_update">
+	{{#if record}}
+	<div class="mask"> </div>
+
+	<div class="modal">
+		
+		<div class="modal-header">
+			<button id="close" type="button" class="close cancel">&times;</button>
+			<h3>Update Customer</h3>
+		</div>
+		
+		<div class="modal-body">
+			
+			<form id="update_customer" class="container-fluid">
+				
+				<legend>General Info</legend>
+
+				<fieldset>	
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_name" placeholder="Customer Name" value="{{record.name}}" class="span12">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_address" placeholder="Customer Address" value="{{record.address}}" class="span12">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_city" placeholder="City…" value="{{record.city}}" class="span6">
+						<input type="text" id="customer_state" placeholder="State" value="{{record.state}}" class="span2">
+						<input type="text" id="customer_zip" placeholder="Zip" value="{{record.zip}}" class="span4">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_phone" placeholder="Phone" value="{{record.phone}}" class="span6">
+						<input type="text" id="customer_fax" placeholder="Fax" value="{{record.fax}}" class="span6">
+					</div>
+					
+				</fieldset>
+				
+				<legend>Other Info</legend>
+				
+				<fieldset>	
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="eda_number" placeholder="EDA Number" value="{{record.eda_number}}" class="span4">
+						<input type="text" id="duns_number" placeholder="DUNS Number" value="{{record.duns_number}}" class="span4">
+						<input type="text" id="sic_code" placeholder="SIC Code" value="{{record.sic_code}}" class="span4">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<textarea id="customer_notes" placeholder="Notes" rows="4" value="{{record.notes}}" class="span12"/>
+					</div>
+
+				</fieldset>
+
+			</form>
+			
+		</div>
+		
+		<div class="modal-footer">
+			<a id="cancel" class="btn cancel">Cancel</a>
+			<input type="submit" id="save_customer" class="btn btn-primary save" value="Save">
+		</div>
+	</div>
+	{{/if}}
+</template>

@@ -1,0 +1,21 @@
+<template name="tasks">
+	
+	{{#if selected}}
+	
+		{{> tasks_list}}
+	
+		{{#if newTask}}
+			{{> tasks_create}}
+		{{/if}}
+	
+		{{#if editTask}}
+			{{> tasks_update}}
+		{{/if}}
+	
+		{{#if viewTask}}
+			{{> tasks_show}}
+		{{/if}}
+		
+	{{/if}}
+	
+</template>

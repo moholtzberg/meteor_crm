@@ -1,0 +1,74 @@
+<head>
+  <title>meteor_crm</title>
+</head>
+
+<body>
+	
+	<header class="row-fluid">
+		{{> nav}}
+	</header>
+	
+	<div class="container-fluid">
+		
+		<div class="row-fluid">
+			
+			<div class="span1">
+				<ul class="thumbnails">
+				  <li class="thumbnail span12">
+					kkkk
+				  </li>
+				</ul>
+			</div>
+
+			<div id="main" class="span11">
+				{{#if currentUser}}
+					
+					{{> customers}}
+					
+					{{> contacts}}
+					
+					{{> tasks}}
+					
+					{{> messages}}
+					
+				{{/if}}
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+
+<template name="nav">
+  	
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		
+		<div class="navbar-inner">
+			
+			<div class="container">
+				
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				
+				<a class="brand" href="#">Project name</a>
+				
+				<div class="nav-collapse collapse">
+					
+					{{> modules}}
+					
+					<ul class="nav pull-right" id="loginNav">
+						<li><a>{{loginButtons align="right"}}</a></li>
+					</ul>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</template>

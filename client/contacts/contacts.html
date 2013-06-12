@@ -1,0 +1,21 @@
+<template name="contacts">
+	
+	{{#if selected}}
+	
+		{{> contacts_list}}
+	
+		{{#if newContact}}
+			{{> contacts_create}}
+		{{/if}}
+	
+		{{#if editContact}}
+			{{> contacts_update}}
+		{{/if}}
+	
+		{{#if viewContact}}
+			{{> contacts_show}}
+		{{/if}}
+	
+	{{/if}}
+	
+</template>

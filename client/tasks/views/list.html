@@ -1,0 +1,37 @@
+<template name="tasks_list">
+	<div class="container-fluid">
+		<table class="table table-bordered table-hover table-condensed">
+			<!-- <thead> -->
+				<tr>
+					<th>Complete</th>
+					<th>Customer</th>
+					<th>Contact</th>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Due Date</th>
+					<th>Actions</th>
+				</tr>
+			<!-- </thead> -->
+			{{#each record}}
+				<tr>
+					<td><input type="checkbox" name="commplete" id="{{_id}}" value="{{complete}}" {{#if complete}}checked{{/if}}></td>
+					<td>{{customer_id}}</td>
+					<td>{{contact_id}}</td>
+					<td>{{name}}</td>
+					<td>{{description}}</td>
+					<td>{{due_date}}</td>
+					<td>
+						<div class="btn-group">
+							<button id="view_task_{{_id}}" task_id="{{_id}}" class="btn btn-small view_task">View</button>
+							<button id="edit_task_{{_id}}" task_id="{{_id}}" class="btn btn-small edit_task">Edit</button>
+							<button id="delete_task_{{_id}}" contaact_id="{{_id}}" class="btn btn-small delete_task">Delete</button>
+						</div>
+					</td>
+				</tr>
+			{{/each}}
+		</table>
+		
+		<button id="new_task" class="btn btn-primary">New Contact</button>
+		
+	</div>
+</template>

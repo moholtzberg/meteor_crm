@@ -1,0 +1,68 @@
+<template name="customers_create">
+	
+	<div class="mask"> </div>
+	<div class="modal" data-backdrop="true">
+		<div class="modal-header">
+			<button id="close" type="button" class="close cancel">&times;</button>
+			<h3>New Customer</h3>
+		</div>
+		
+		<div class="modal-body">
+			{{#if error}}
+			<div class="alert alert-error">{{error}}</div>
+			{{/if}}
+			
+			<form id="create_customer" class="container-fluid">
+
+				<legend>General Info</legend>
+
+				<fieldset>	
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_name" placeholder="Customer Name"  class="span12">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_address" placeholder="Customer Address"  class="span12">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_city" placeholder="City" class="span6">
+						<input type="text" id="customer_state" placeholder="State"  class="span2">
+						<input type="text" id="customer_zip" placeholder="Zip"  class="span4">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="customer_phone" placeholder="Phone"  class="span6">
+						<input type="text" id="customer_fax" placeholder="Fax"  class="span6">
+					</div>
+					
+				</fieldset>
+				
+				<legend>Other Info</legend>
+				
+				<fieldset>	
+					
+					<div class="row-fluid controls controls-row">
+						<input type="text" id="eda_number" placeholder="EDA Number"  class="span4">
+						<input type="text" id="duns_number" placeholder="DUNS Number"  class="span4">
+						<input type="text" id="sic_code" placeholder="SIC Code"  class="span4">
+					</div>
+					
+					<div class="row-fluid controls controls-row">
+						<textarea id="customer_notes" placeholder="Notes" rows="4" class="span12"/>
+					</div>
+
+				</fieldset>
+
+			</form>
+			
+		</div>
+		
+		<div class="modal-footer">
+			<a id="cancel" class="btn cancel">Cancel</a>
+			<a id="save_customer" class="btn btn-primary save">Save Customer</a>
+		</div>
+	</div>
+	
+</template>
