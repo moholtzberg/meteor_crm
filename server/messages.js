@@ -12,14 +12,6 @@ Meteor.startup(function () {
 			body: "Test", 
 			html: "Test"});
 	};
-
-	collectionApi.addCollection(Messages, 'messages', {
-		authToken: undefined, 
-		methods: ['POST'],
-		before: {
-			POST: undefined
-		}
-	});
 	
 });
 
