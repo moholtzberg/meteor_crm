@@ -1,4 +1,4 @@
-process.env.MAIL_URL = 'smtp://postmaster%40moholtzberg.mailgun.org:3nvcayl0a1p8@smtp.mailgun.org:587';
+// process.env.MAIL_URL = 'smtp://postmaster%40moholtzberg.mailgun.org:3nvcayl0a1p8@smtp.mailgun.org:587';
 
 Messages = new Meteor.Collection("messages");
 	
