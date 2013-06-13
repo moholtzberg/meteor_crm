@@ -39,7 +39,7 @@ Template.customers.action = function(action) {
 }
 
 Template.customers_list.record = function() {
-	return Customers.find().fetch();
+	return Customers.find({}, {sort: {name: 1}}).fetch();
 }
 
 Template.customers_show.record = function() {
