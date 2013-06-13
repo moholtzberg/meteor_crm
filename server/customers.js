@@ -17,11 +17,11 @@ Customers.allow({
 	}
 });
 
-// var isPresent = Match.Where(function(string){
-// 	console.log(string);
-// 	console.log(" - " + check(string, String) && string.length > 0 && string[0] !== " ");
-// 	return check(string, String) && string.length > 0 && string[0] !== " ";
-// });
+var isPresent = Match.Where(function(string){
+	console.log(string);
+	console.log(" - " + check(string, String) && string.length > 0 && string[0] !== " ");
+	return check(string, String) && string.length > 0 && string[0] !== " ";
+});
 
 // Meteor.methods({
 // 	createRecord: function (doc) {
