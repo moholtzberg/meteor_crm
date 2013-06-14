@@ -46,8 +46,8 @@ Meteor.methods({
   //   		return true;
   //   	}
 	
-	sendEmail: function(to, from, subject, text) {
-		var msg_id = Messages.insert({user_id: this.userId, to: to, from: from, subject: subject, body: text,sent_at: new Date(), events: {
+	sendEmail: function(to, from, subject, body) {
+		var msg_id = Messages.insert({user_id: this.userId, to: to, from: from, subject: subject, body: body, sent_at: new Date(), events: {
 		    deliverd: {
 		      status: false,
 		      time_stamp: null
