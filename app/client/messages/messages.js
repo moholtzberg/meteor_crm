@@ -28,4 +28,4 @@ Template.messages.action = function(action) {
 
 Template.messages_list.record = function() {
 	return Messages.find().fetch();
-}
+};
