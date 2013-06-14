@@ -13,13 +13,13 @@ Meteor.startup(function () {
 			html: "Test"});
 	};
 
-	// collectionApi.addCollection(Messages, 'messages', {
-	// 	authToken: undefined, 
-	// 	methods: ['POST'],
-	// 	before: {
-	// 		POST: undefined
-	// 	}
-	// });
+	collectionApi.addCollection(Messages, 'messages', {
+		authToken: undefined, 
+		methods: ['POST'],
+		before: {
+			POST: undefined
+		}
+	});
 	
 });
 
