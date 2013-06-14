@@ -68,7 +68,7 @@ Meteor.methods({
 				"from": from,
 				"to": to,
 				"subject": subject,
-				"html": html,
+				"body": body,
 				"h:X-Mailgun-Variables": JSON.stringify({user_id:this.userId}),
 				"o:tracking": "True"
 				}
